@@ -8,4 +8,7 @@ fetch("https://breaking-bad-quotes.herokuapp.com/v1/quotes")
   .then((data) => {
     document.getElementById("quote").textContent = data[0].quote;
     document.getElementById("author").textContent = data[0].author;
+  })
+  .catch((error) => {
+    console.error('Error:', error);
   });
